@@ -7,6 +7,6 @@
     I will continue to add to this so people can challenge themselves and see a solution, out
     of the thousands of solutions there are.
 
-    I hope that finds you well.
+    I hope this finds you well.
 
-    #Love ya boi!
+    #Love, ya boi!
