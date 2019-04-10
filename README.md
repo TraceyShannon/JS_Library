@@ -1,4 +1,4 @@
-#Hello To Anyone Who Reads This,
+# Hello To Anyone Who Reads This,
 
   This is my attempt at understanding JavaScript at a lower level by recreating functions and
   methods from scratch with very little help from the actual language functions. If you're on the
@@ -9,4 +9,4 @@
 
     I hope this finds you well.
 
-    #Love, ya boi!
+    Love, ya boi!
