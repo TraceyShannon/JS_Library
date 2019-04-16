@@ -96,16 +96,12 @@ span {
 
 .calculator {
   background: #333;
-  width: 29%;
-  /* border: solid 1px #333; */
+  width: 39%;
+  text-align: center;
 }
 
 .output {
   width: 100%;
-}
-
-.row {
-
 }
 
 .calc {
@@ -140,5 +136,11 @@ span {
   background: coral;
 }
 
-.zero {
+.js_library {
+  width: 80%;
+  margin: auto;
+}
+
+.lib {
+  margin: 60px auto;
 }

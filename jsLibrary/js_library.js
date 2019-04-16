@@ -429,6 +429,7 @@ JS.DOM.TodoList.list = (el, arr, className = "item", className2) => {
   let counter = 0;
   let list = [];
   className2 = "del";
+  arr[0] = "hidden item, you can ignore this but dont delete it";
   JS.forEvery(arr, function(item) {
     el.insertAdjacentHTML("beforeend", "<div id=" + id + " class='" + id + " " + className + "'><p>" + item + "</p><span class='action'><button id=" + id + " class=" + className2 + ">delete</button></span></div>");
     list[counter] = {item: item, id: id};
@@ -486,7 +487,7 @@ JS.DOM.TodoList.delEl = (el, arr, arr2) => {
 // ==== USE CASE ==== //
 let button = document.querySelector("button");
 let input = document.querySelector("input");
-let myList = ["hidden item, you can ignore this but dont delete it"]; // I needed this to be empty but this works for now
+let myList = []; // this needs to be empty
 let myTodoList;
 
 myTodoList = JS.DOM.TodoList.list("todo_list", myList, "item");
@@ -560,8 +561,50 @@ let myStr2 = "Hello Everyone, this is my attempt at a small JavaScript Library t
 let myFixedStr = JS.linter.replace(myStr2, "Hello", "Hi");
 myFixedStr = JS.linter.replace(myStr2, "Everyone,", "All,");
 print(myFixedStr._str);
-print(myFixedStr.words);
-print(myFixedStr._replaced);
+// print(myFixedStr.words);
+// print(myFixedStr._replaced);
+
+// ==== Lodash Chunk Function ==== //
+JS.break = (arr, num) => {
+  let newArr = [];
+  let arr2 = [];
+  let j = 0;
+  let x = 0;
+  for (var i = 0; i < arr.length; i++) {
+    arr2[x] = arr[i];
+    x++;
+    if (arr2.length === num) {
+      newArr[j] = arr2;
+      arr2 = [];
+      x = 0;
+      j++;
+    } else if (arr2.length != num) {
+      newArr[j] = arr2;
+    }
+  }
+  return newArr;
+}
+
+// ==== USE CASE ==== //
+// let myArr4 = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+// print(JS.break(myArr4, 3));
+
+// ==== Lodash Compact Function ==== //
+JS.squash = arr => {
+  let newArr = [];
+  let x = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      newArr[x] = arr[i];
+      x++;
+    }
+  }
+  return newArr;
+}
+
+// ==== USE CASE ==== //
+// let myArr5 = [0, 1, 2, false, "", "cake", "123", true];
+// print(JS.squash(myArr5));
 
 // ==== PROJECTS ==== //
 
